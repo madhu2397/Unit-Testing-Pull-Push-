@@ -1,0 +1,62 @@
+<div>
+    <h2>Parent Component</h2>
+    <input type="text" name="" [(ngModel)]="channelNameInParent">
+
+    <p>{{receivedData}}</p>
+</div>
+
+<app-child [channelName]="channelNameInParent" (sendMsgEmitter)="dataFromChild($event)"></app-child>
+
+
+<!-- 
+1-3
+12-6
+person  apple
+1       1/2
+1       3
+1       2
+
+
+1m-3
+1w-2
+2b-1apple
+
+2m-6
+1w-2=8
+
+3person = 8apple
+6boys- 3apple
+
+9person = 11apple
+(8person)= (6apple)
+
+4boys- 2
+
+13person - 13apple
+
+1w-2apple
+10person - 13apple
+
+7person = 4apple
+
+2boys- 1apple
+
+12person - 14apple
+
+4boys - 2apple
+16person - 16apple
+
+
+
+
+
+6boys- 3 apple
+15person  14apple
+
+1w- 2apple
+
+16person 16apple
+
+10boys
+
+ -->
